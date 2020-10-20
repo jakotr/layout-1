@@ -5,6 +5,222 @@
 }
 
 .wrapper {
-    width: 100%;
+    width: 100vw;
     height: auto;
+    position: relative;
+    font-family: 'Sen', sans-serif;
+}
+
+/* ------------------------------------------------------- NavBar ---------------------------------------------------------------- */
+
+.nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.nav__wrapper {
+    width: 80%;
+    margin: 0 auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__wrapper__logo {
+    width: 50%;
+    margin-top: 16px;
+}
+
+.nav__wrapper__list {
+    width: 50%;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
+
+.nav__wrapper__list__item__link {
+    font-size: 16px;
+    color: #1C2085;
+    text-decoration: none;
+    padding: 6px 5px;
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav__wrapper__list__item__link::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #1C2085;
+}
+
+/* ------------------------------------------------------- HEADER ---------------------------------------------------------------- */
+
+.header {
+    width: 100%;
+    height: 908px;
+    position: relative;
+    top: 70px;
+    /* overflow: hidden; */
+}
+
+.header__bg-shape {
+    position: absolute;
+}
+
+.header__bg-shape:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.header__bg-shape:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+}
+
+.header__bg-shape:nth-child(2) {
+    background-color: #4250BF;
+    box-shadow: 0px 4px 130px #263396;
+    width: 50%;
+    height: 663px;
+    transform: matrix(-0.96, -0.28, -0.28, 0.96, 0, 0);
+    border-radius: 50px;
+    left: -100px;
+    top: 100px;
+}
+
+.header__bg-shape:nth-child(3) {
+    background-color: #3947B6;
+    box-shadow: 0px 11px 106px #2A389D;
+    width: 85%;
+    height: 612px;
+    transform: matrix(-1, -0.3, -0.3, 1, 0, 0);
+    border-radius: 50px;
+    top: -200px;
+    left: -100px;
+}
+
+.header__inner-wrapper {
+    width: 85%;
+    height: 652px;
+    margin: 0 5% 0 10%;
+    position: relative;
+    top: 126px;
+    color: white;
+}
+
+.header__inner-wrapper__title {
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    top: 80px;
+    width: 45%;
+}
+
+.header__inner-wrapper__newsletter {
+    position: absolute;
+    bottom: 184px;
+    left: 0;
+}
+
+.header__inner-wrapper__newsletter__title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.header__inner-wrapper__newsletter__form {
+    width: 570px;
+    /* display: flex; */
+    position: relative;
+}
+
+.header__inner-wrapper__newsletter__form__input {
+    font-size: 17px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 480px;
+    border: none;
+    color: #576677;
+}
+
+.header__inner-wrapper__newsletter__form__button {
+    font-size: 17px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    width: 154px;
+    border: none;
+    position: absolute;
+    right: 0;
+    background-color: #38A5DB;
+    color: white;
+}
+
+.header__inner-wrapper__video {
+    position: absolute;
+    width: 50%;
+    max-width: 544px;
+    min-width: 484px;
+    top: 0;
+    right: 0;
+}
+
+.header__inner-wrapper__video img {
+    width: 100%;
+}
+
+.header__inner-wrapper__video__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #38A5DB;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.header__inner-wrapper__next-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.header__inner-wrapper__arrow-link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-weight: 100; */
 }
