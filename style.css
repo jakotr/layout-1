@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
     position: relative;
     font-family: 'Sen', sans-serif;
@@ -111,15 +111,16 @@
 }
 
 .header__inner-wrapper {
-    width: 85%;
+    width: 90%;
     height: 652px;
-    margin: 0 5% 0 10%;
+    margin: 0 5%;
     position: relative;
     top: 126px;
     color: white;
 }
 
 .header__inner-wrapper__title {
+    margin-left: 5%;
     font-size: 40px;
     font-weight: 700;
     position: absolute;
@@ -129,6 +130,7 @@
 
 .header__inner-wrapper__newsletter {
     position: absolute;
+    margin-left: 5%;
     bottom: 184px;
     left: 0;
 }
@@ -196,17 +198,6 @@
     text-decoration: none;
 }
 
-.header__inner-wrapper__next-arrow {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-}
-
 .header__inner-wrapper__arrow-link {
     position: absolute;
     bottom: 0;
@@ -223,4 +214,80 @@
     text-decoration: none;
     font-size: 20px;
     /* font-weight: 100; */
+}
+
+/* ------------------------------------------------------- TEAM  ---------------------------------------------------------------- */
+
+.team {
+    width: 80%;
+    margin: 120px auto 0;
+}
+
+.team__title {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 12px;
+    color: #1C1F83;
+}
+
+.team__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+}
+
+.team__cards__card {
+    width: 25%;
+    max-width: 270px;
+    text-align: center;
+}
+
+.team__cards__card__image {
+    margin: 0px auto 20px;
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team__cards__card__image img {
+    width: 100%;
+}
+
+.team__cards__card__name {
+    font-size: 24px;
+    color: #38A5DB;
+}
+
+.team__cards__card__position {
+    margin: 8px 0 16px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #011226;
+}
+
+.team__cards__card__description {
+    font-size: 18px;
+    color: #45515F;
+}   
+
+.team__cards__card__links {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.team__cards__card__links__icon {
+    width: 43px;
+    height: 23px;
+    border: 1px solid #7f8b9833;
+    border-radius: 3px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #001832;
+    text-decoration: none;
 }
