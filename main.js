@@ -5,13 +5,13 @@ const navLinks = $(".nav__wrapper__list__item__link");
 navLinks.on('click', function(event) {
     $('body, html').animate({
         scrollTop: $(`.${$(event.target).data('scroll')}`).offset().top - 100
-    }, 1000);
+    }, 500);
 });
 
 $('.header__inner-wrapper__arrow-link').on('click', function(event) {
     $('body, html').animate({
         scrollTop: $('.team').offset().top - 100
-    }, 1000);
+    }, 500);
 })  
 
 $(window).on('scroll', function() {
