@@ -24,7 +24,7 @@ a, a:hover, a:active, a:visited, a:focus {
     top: 0;
     left: 0;
     background-color: #fff;
-    z-index: 1;
+    z-index: 3;
 }
 
 .nav__wrapper {
@@ -36,11 +36,8 @@ a, a:hover, a:active, a:visited, a:focus {
     align-items: center;
 }
 
-.nav__wrapper__logo {
-    margin-top: 16px;
-}
-
 .nav__wrapper__list {
+    margin: 0;
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
@@ -55,7 +52,7 @@ a, a:hover, a:active, a:visited, a:focus {
     position: relative;
 }
 
-.nav__wrapper__list__item__link::before {
+.active__link::before {
     content: '';
     height: 2px;
     width: 100%;
@@ -205,6 +202,12 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: 20px;
     color: white;
     text-decoration: none;
+    transition: .3s;
+}
+
+.header__inner-wrapper__video__play:hover {
+    background-color: #6ad8fa;
+    color: white;
 }
 
 .header__inner-wrapper__arrow-link {
@@ -222,11 +225,18 @@ a, a:hover, a:active, a:visited, a:focus {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    /* font-weight: 100; */
 }
 
 .header__inner-wrapper__arrow-link:hover {
     color: white;
+}
+
+.fa-arrow-down {
+    transition: .3s;
+}
+
+.header__inner-wrapper__arrow-link:hover .fa-arrow-down {
+    transform: translateY(5px);
 }
 
 /* ------------------------------------------------------- TEAM  ---------------------------------------------------------------- */
@@ -309,6 +319,30 @@ a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
 }
 
+/* ------------------------------------------------------- slider-team  
+---------------------------------------------------------------- */
+.team__cards__slider {
+    margin-top: 44px;
+    display: none;
+}
+.carousel-item__team {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carousel-indicators {
+    bottom: -15%;
+    z-index: 2;
+}
+
+.carousel-indicators li {
+    background-color: #333;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
 /* ------------------------------------------------------- MODAL-team  
 ---------------------------------------------------------------- */
 .modal {
@@ -343,12 +377,14 @@ a, a:hover, a:active, a:visited, a:focus {
     font-size: 40px;
     color: #38A5DB;
     margin-bottom: 24px;
+    text-align: center;
 }
 
 .modal-body__position {
     font-size: 13px;
     color: #011226;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 .modal-body__content {
@@ -409,7 +445,6 @@ a, a:hover, a:active, a:visited, a:focus {
     display: flex;
     align-items: center;
     align-self: flex-start;
-    /* margin-left: 41px; */
 }
 
 .contact__form__checkbox__input {
@@ -420,6 +455,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 .contact__form__checkbox__label {
     font-size: 17px;
+    margin: 0;
 }
 
 .contact__form__button {
@@ -527,9 +563,19 @@ a, a:hover, a:active, a:visited, a:focus {
     border-radius: 50%;
     text-decoration: none;
     margin-bottom: 12px;
+    transition: .3s;
+}
+
+.socials__link:hover {
+    color: white;
+    transform: scale(1.1);
 }
 
 @media (max-width: 1024px) {
+
+    .header__inner-wrapper__arrow-link:hover .fa-arrow-down {
+        transform: none;
+    }
 
     /* ------------------------------------------------------- HEADER ---------------------------------------------------------------- */
 
@@ -585,8 +631,16 @@ a, a:hover, a:active, a:visited, a:focus {
         width: 90%;
     } 
 
+    .team__cards {
+        display: none;
+    }
+
     .modal-dialog {
         width: 80%;
+    }
+
+    .team__cards__slider {
+        display: block;
     }
 }
 
@@ -600,6 +654,10 @@ a, a:hover, a:active, a:visited, a:focus {
     }
 
     .nav__wrapper__list__item__link {
+        margin: 0;
+    }
+
+    .nav__wrapper__list__item:nth-child(2) {
         margin: 0 10px;
     }
 
@@ -658,6 +716,27 @@ a, a:hover, a:active, a:visited, a:focus {
 
     .team {
         margin-top: 60%;
+    }
+
+    .team__cards__card {
+        width: 136px;
+    }
+
+    .team__cards__card__image {
+        width: 115px;
+        height: 115px;
+    }
+
+    .team__cards__card__name {
+        font-size: 16px;
+    }
+
+    .team__cards__card__position {
+        font-size: 13px;
+    }
+
+    .team__cards__card__description {
+        font-size: 12px;
     }
 
     .modal-dialog {
